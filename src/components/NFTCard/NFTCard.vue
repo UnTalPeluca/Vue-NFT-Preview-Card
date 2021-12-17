@@ -1,7 +1,9 @@
 <template>
   <div class="card">
     <div class="card__product-img">
-      <img class="card__img" 
+      <img 
+        class="card__img"
+        alt="product-image" 
         :src="require('@/static/images/' + img)"
       >
     </div>
@@ -11,13 +13,13 @@
       <div class="card__content-bottom">
         <div class="card__price">
           <div class="icon">
-            <img src="@/assets/images/nft-card/icon-ethereum.svg">
+            <img src="@/assets/images/nft-card/icon-ethereum.svg" alt="">
           </div>
           <p>{{ price }} ETH</p>
         </div>
         <div v-if="time" class="card__time">
           <div class="icon">
-            <img src="@/assets/images/nft-card/icon-clock.svg">
+            <img src="@/assets/images/nft-card/icon-clock.svg" alt="">
           </div>
           <p>{{ time }} days left</p>
         </div>
@@ -25,7 +27,7 @@
     </div>
     <div class="card__footer">
       <div class="card__avatar">
-        <img :src="require('@/static/images/' + avatar)">
+        <img :src="require('@/static/images/' + avatar)" alt="avatar-image">
       </div>
       <p class="card__autor">Creation of <span class="card__autor--alt-color">{{ autor }}</span></p>
     </div>
@@ -152,6 +154,9 @@ export default {
       display: flex;
       justify-content: space-between;
       padding-top: 4px;
+      @media screen and (min-width: 768px) {
+        padding-top: 6px;
+      }
       > * {
         display: flex;
         align-items: center;
