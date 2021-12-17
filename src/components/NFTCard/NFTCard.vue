@@ -73,9 +73,6 @@ export default {
       default: '',
     },
   },
-  data: () => ({
-    imgHovered: false,
-  })
 }
 </script>
 
