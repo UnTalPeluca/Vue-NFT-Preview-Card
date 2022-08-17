@@ -107,18 +107,11 @@ export default {
       opacity: 0;
       transition: opacity 0.25s ease-out;
     }
-    &::before {
-      @include hoverOpacity;
-      background-color: cyan;
-    }
     &::after {
       @include hoverOpacity;
-      background: no-repeat url(../../assets/images/nft-card/icon-view.svg) center;
+      background: no-repeat rgba(0, 255, 255, 0.5) url(../../assets/images/nft-card/icon-view.svg) center;
     }
     &:hover {
-      &::before {
-        opacity: 0.5;
-      }
       &::after {
         opacity: 1;
       }
